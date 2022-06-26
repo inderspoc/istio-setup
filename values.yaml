@@ -1,7 +1,7 @@
 global:
   env: dev
   helmDefault: true
-  valuesFile: istio-dependencies/values.yaml
+  valuesFile: istio-dependencies/values-test.yaml
   spec:
     project: istio-desv
     destination:
