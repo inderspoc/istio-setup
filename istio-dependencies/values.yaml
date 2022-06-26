@@ -17,5 +17,5 @@ argocdApplications:
     disable: false
     name: istio-base
     namespace: istio-system
-    source_path: "helm-carts/base"
+    source_path: "helm-charts/base"
     project: istio-dev
