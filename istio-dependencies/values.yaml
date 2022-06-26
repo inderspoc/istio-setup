@@ -15,7 +15,7 @@ argocdApplications:
   istio-base:
     disableAutomated: false
     disable: false
-    name: istio
+    name: istio-base
     namespace: istio-system
     source_path: "helm-carts/base"
     project: istio-dev
