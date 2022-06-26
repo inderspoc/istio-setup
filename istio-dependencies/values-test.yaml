@@ -11,7 +11,7 @@ global:
       repoURL: https://github.com/paas2/istio
       targetRevision: HEAD
 
-argocdApplications:
+iargocdApplications:
   istio-base:
     disableAutomated: false
     disable: false
