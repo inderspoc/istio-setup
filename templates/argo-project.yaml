@@ -1,0 +1,25 @@
+{{- if .Values.argocdProjects }}
+{{- range $project := .Values.argocdProjects }}
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  creationTimestamp: null
+  labels:
+    app: {{ .name }}
+  name: {{ .name }}
+spec:
+  sourceRepos:
+  - 'https://github.com/paas2-bnk/bwb-infra-apps'
+  - 'https://github.com/inderspoc/istio-setup.git'
+{{- if .destinations }}
+  destinations:
+{{ toYaml .destinations | indent 2 }}
+{{- end }}
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+
+{{- end }}
+{{- end }}

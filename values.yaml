@@ -1,0 +1,30 @@
+global:
+  env: dev
+  helmDefault: true
+  valuesFile: istio-dependencies/values.yaml
+  spec:
+    project: istio-desv
+    destination:
+      server: https://kubernetes.default.svc
+      namespace: default
+    source:
+      repoURL: https://github.com/inderspoc/istio-setup.git
+      targetRevision: HEAD
+
+argocdApplications:
+  istio:
+    disableAutomated: false
+    disable: false
+    name: istio
+    namespace: istio-system
+    source_path: "."
+    project: istio-dev
+
+argocdProjects:
+  development:
+    destinations: 
+    -  server: "https://kubernetes.default.svc"
+       namespace: "*"
+    name: istio-dev
+
+
