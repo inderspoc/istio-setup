@@ -20,11 +20,4 @@ argocdApplications:
     source_path: "."
     project: istio-dev
 
-argocdProjects:
-  development:
-    destinations: 
-    -  server: "https://kubernetes.default.svc"
-       namespace: "*"
-    name: istio-dev
-
 
