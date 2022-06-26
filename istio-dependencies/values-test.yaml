@@ -11,11 +11,11 @@ global:
       repoURL: https://github.com/paas2/istio
       targetRevision: HEAD
 
-iargocdApplications:
+argocdApplications:
   istio-base:
     disableAutomated: false
     disable: false
     name: istio-base
-    namespace: istio-system
+    namespace: argocd
     source_path: "helm-charts/base"
     project: istio-dev

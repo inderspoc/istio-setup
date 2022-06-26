@@ -16,7 +16,7 @@ argocdApplications:
     disableAutomated: false
     disable: false
     name: istio
-    namespace: istio-system
+    namespace: argocd
     source_path: "."
     project: istio-dev
 
